@@ -1,0 +1,70 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XO Game - Stylish Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- AMP Ad Script -->
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+
+    <!-- AMP Requirement -->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+
+    <!-- AMP Background Ad -->
+    <amp-ad width="100vw" height="320"
+      type="adsense"
+      data-ad-client="ca-pub-8303489454573253"
+      data-ad-slot="7311834603"
+      data-auto-format="rspv"
+      data-full-width="">
+      <div overflow=""></div>
+    </amp-ad>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+      <h2>Loading Game...</h2>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
+    </div>
+
+    <!-- Game Container -->
+    <div class="container" id="game-container">
+      <h1>XO Game</h1>
+
+      <!-- Mode Selection -->
+      <div class="mode-buttons" id="mode-buttons">
+        <button onclick="startGame('player')">2 Player</button>
+        <button onclick="startGame('computer')">Vs Computer</button>
+      </div>
+
+      <!-- Game Grid -->
+      <div class="grid" id="grid">
+        <div class="cell" onclick="handleClick(0)"></div>
+        <div class="cell" onclick="handleClick(1)"></div>
+        <div class="cell" onclick="handleClick(2)"></div>
+        <div class="cell" onclick="handleClick(3)"></div>
+        <div class="cell" onclick="handleClick(4)"></div>
+        <div class="cell" onclick="handleClick(5)"></div>
+        <div class="cell" onclick="handleClick(6)"></div>
+        <div class="cell" onclick="handleClick(7)"></div>
+        <div class="cell" onclick="handleClick(8)"></div>
+      </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <h2 id="popup-message">You Win!</h2>
+        <button onclick="resetGame()">Play Again</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
